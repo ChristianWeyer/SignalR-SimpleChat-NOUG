@@ -1,0 +1,5 @@
+A very simple SignalR live coding chat example for DOUG (http://online-usergroup.de/).
+-ASP.NET host
+-Console self-host
+-HTML5/JS client
+-Windows Forms client

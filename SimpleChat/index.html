@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+    <title>Simple Chat</title>
+</head>
+<body>
+    <script src="Scripts/json2.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.6.4.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.signalR-0.5.3.js" type="text/javascript"></script>
+    <script src="signalr/hubs" type="text/javascript"></script>
+    <!--<script src="http://localhost:7777/push/signalr/hubs" type="text/javascript"></script>-->
+
+    <script type="text/javascript">
+        var chat;
+
+        $(function () {
+            //$.connection.hub.url = 'http://localhost:7777/push/signalr';
+
+            chat = $.connection.chat;
+            chat.addMessage = onAddMessage;
+
+            $('#send').click(onSend);
+
+            $.connection.hub.start();
+        });
+
+
+        function onAddMessage(message) {
+            $('#messages').append('<li>' + message + '</li>');
+        };
+
+        function onSend() {
+            chat.sendMessage($('#message').val());
+        };
+    </script>
+
+    <div>
+    
+    <input type="text" id="message" />
+    <input type="button" id="send" value="Send message" />
+
+    <ul id="messages"></ul>
+
+    </div>
+</body>
+</html>
