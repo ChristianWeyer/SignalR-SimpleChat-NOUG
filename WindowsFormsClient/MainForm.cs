@@ -19,11 +19,11 @@ namespace WindowsFormsClient
                 new HubConnection("http://localhost:8842/");
         
             chat = hubConnection.CreateProxy("chat");
-
+            
             chat.On<string>("addMessage", msg =>
-                {
-                    listBox1.Items.Add(msg);
-                });
+            {
+                listBox1.Invoke(new Action(() => listBox1.Items.Add(msg)));
+            });
 
             hubConnection.Start().Wait();
         }
