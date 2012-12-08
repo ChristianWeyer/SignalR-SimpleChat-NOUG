@@ -1,5 +1,5 @@
 ﻿using System;
-using SignalR.Hosting.Self;
+using Microsoft.AspNet.SignalR.Hosting.Self;
 
 namespace ConsoleHost
 {

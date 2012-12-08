@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using SignalR.Client.Hubs;
+using Microsoft.AspNet.SignalR.Client.Hubs;
 
 namespace WindowsFormsClient
 {
@@ -18,7 +18,7 @@ namespace WindowsFormsClient
             var hubConnection =
                 new HubConnection("http://localhost:8842/");
         
-            chat = hubConnection.CreateProxy("chat");
+            chat = hubConnection.CreateHubProxy("chat");
             
             chat.On<string>("addMessage", msg =>
             {

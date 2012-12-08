@@ -4,8 +4,8 @@
 </head>
 <body>
     <script src="Scripts/json2.js" type="text/javascript"></script>
-    <script src="Scripts/jquery-1.6.4.js" type="text/javascript"></script>
-    <script src="Scripts/jquery.signalR-0.5.3.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.6.4.js" type="text/javascript"></script>    
+    <script src="Scripts/jquery.signalR-1.0.0-alpha2.min.js"></script>
     <script src="signalr/hubs" type="text/javascript"></script>
     <!--<script src="http://localhost:7777/push/signalr/hubs" type="text/javascript"></script>-->
 
@@ -16,7 +16,7 @@
             //$.connection.hub.url = 'http://localhost:7777/push/signalr';
 
             chat = $.connection.chat;
-            chat.addMessage = onAddMessage;
+            chat.client.addMessage = onAddMessage;
 
             $('#send').click(onSend);
 
@@ -29,7 +29,7 @@
         };
 
         function onSend() {
-            chat.sendMessage($('#message').val());
+            chat.server.sendMessage($('#message').val());
         };
     </script>
 

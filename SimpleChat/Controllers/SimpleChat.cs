@@ -1,4 +1,4 @@
-﻿using SignalR.Hubs;
+﻿using Microsoft.AspNet.SignalR.Hubs;
 
 namespace SimpleChat.Controllers
 {
@@ -7,7 +7,7 @@ namespace SimpleChat.Controllers
     {
         public void SendMessage(string message)
         {
-            Clients.addMessage(message);
+            Clients.All.addMessage(message);
         }
     }
 }
