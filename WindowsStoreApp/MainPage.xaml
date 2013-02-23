@@ -8,9 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <ListBox x:Name="lbMessages" HorizontalAlignment="Left" Height="640" Margin="10,118,0,0" VerticalAlignment="Top" Width="1346"/>
-        <TextBox x:Name="tbMessage" HorizontalAlignment="Left" Margin="10,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601"/>
-        <Button x:Name="bnSend" Content="Send" HorizontalAlignment="Left" Margin="661,45,0,0" VerticalAlignment="Top" Click="bnSend_Click"/>
+        <ListBox x:Name="lbMessages" HorizontalAlignment="Left" Height="612" Margin="10,146,0,0" VerticalAlignment="Top" Width="1346"/>
+        <TextBox x:Name="tbMessage" HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601"/>
+        <Button x:Name="bnSend" Content="Send" HorizontalAlignment="Left" Margin="631,90,0,0" VerticalAlignment="Top" Click="bnSend_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="Simple Chat" VerticalAlignment="Top" FontSize="28"/>
 
     </Grid>
 </Page>

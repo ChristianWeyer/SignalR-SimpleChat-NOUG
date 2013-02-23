@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNet.SignalR.Client.Hubs;
+using System;
 using System.Windows.Forms;
-using Microsoft.AspNet.SignalR.Client.Hubs;
 
 namespace WindowsFormsClient
 {

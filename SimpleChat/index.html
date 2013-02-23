@@ -3,11 +3,15 @@
     <title>Simple Chat</title>
 </head>
 <body>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
     <script src="Scripts/json2.js" type="text/javascript"></script>
-    <script src="Scripts/jquery-1.6.4.js" type="text/javascript"></script>    
-    <script src="Scripts/jquery.signalR-1.0.0-alpha2.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>    
+    <script src="Scripts/bootstrap.min.js"></script>
+    
+    <script src="Scripts/jquery.signalR-1.0.0.min.js"></script>
     <script src="signalr/hubs" type="text/javascript"></script>
-    <!--<script src="http://localhost:7777/push/signalr/hubs" type="text/javascript"></script>-->
+    <!--<script src="http://localhost:7777/push/signalr/hubs" type="text/javascript"></script>-->    
 
     <script type="text/javascript">
         var chat;
@@ -32,14 +36,16 @@
             chat.server.sendMessage($('#message').val());
         };
     </script>
-
-    <div>
     
-    <input type="text" id="message" />
-    <input type="button" id="send" value="Send message" />
+    <div class="hero-unit">
+        <h2>Simple Chat</h2>
+        
+        <label for="message">Message:</label><input type="text" id="message"/>        
+        <input type="button" id="send" value="Send message" />        
 
-    <ul id="messages"></ul>
-
+        <div class="container">
+            <ul id="messages"></ul>
+        </div>
     </div>
 </body>
 </html>

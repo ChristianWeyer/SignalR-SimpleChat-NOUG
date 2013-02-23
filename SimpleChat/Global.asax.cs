@@ -1,5 +1,4 @@
-﻿using System.Web.Http;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace SimpleChat
@@ -10,10 +9,11 @@ namespace SimpleChat
     {
         protected void Application_Start()
         {
+            RouteTable.Routes.MapHubs();
             AreaRegistration.RegisterAllAreas();
 
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);            
         }
     }
 }
