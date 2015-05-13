@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNet.SignalR.Client.Hubs;
-using Windows.UI.Core;
+﻿using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.AspNet.SignalR.Client;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
